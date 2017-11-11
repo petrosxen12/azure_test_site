@@ -1,8 +1,8 @@
 <?php
 
-$myPHPValue=isset($_GET['value'])?$_GET['value']:"";
+$screenname=isset($_GET['username'])?$_GET['username']:"";
+$
  
-echo $myPHPValue." World!";
+echo $screenname." World!";
  
 ?>
-
