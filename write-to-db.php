@@ -23,7 +23,7 @@ $query = "INSERT INTO scores (username, score)
 VALUES ('". $screenname ."', ". $scoreOfUser .")";
 
 if ($connection->query($query) === TRUE) {
-    echo "New record created successfullyy";
+    echo "New record created successfully";
 } else {
     echo "Error: " . $query . "<br>" . $connection->error;
 }
