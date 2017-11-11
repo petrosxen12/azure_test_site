@@ -3,6 +3,6 @@
 $screenname=isset($_GET['username'])?$_GET['username']:"";
 
  
-echo $screenname." World!";
+echo  "Username of user is: ".$screenname;
  
 ?>
