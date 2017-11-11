@@ -17,12 +17,10 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<p> <strong>Username:</strong> " . $row["username"]. " <strong>Score:</strong>" . $row["score"]. "<br>";
+        echo "id: " . $row["id"]. " - Username: " . $row["username"]. " Score:" . $row["score"]. "<br>";
     }
 } else {
     echo "0 results";
 }
 $conn->close();
 ?>
-
-<!-- <p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p> -->
