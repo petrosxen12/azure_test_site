@@ -7,8 +7,18 @@ $dbname = "scores";
 //$username = $_POST["username"];
 //$score = $_POST["score"];
 
+$username=isset($_GET['username'])?$_GET['username']:"";
+$score=isset($_GET['score'])?$_GET['score']:"";
+ 
+echo  "Username of user is: ".$screenname."\n";
+echo  "Score is: ".$scoreOfUser;
+
+
+/*
 $username = 'Giannis';
 $score = 0;
+*/
+
 
 // Connect to database
 $connection = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
