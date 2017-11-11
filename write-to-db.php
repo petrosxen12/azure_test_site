@@ -18,7 +18,7 @@ echo  "Score is: ".$score;
 $username = 'Giannis';
 $score = 0;
 */
-
+echo "\n";
 
 // Connect to database
 $connection = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
@@ -31,7 +31,7 @@ $query = "INSERT INTO scores (username, score)
 VALUES ('". $username ."', ". $score .")";
 
 if ($connection->query($query) === TRUE) {
-    echo "New record created successfullyy";
+    echo "New record created successfully.";
 } else {
     echo "Error: " . $query . "<br>" . $connection->error;
 }
