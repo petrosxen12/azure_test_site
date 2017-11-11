@@ -12,11 +12,9 @@ $score=isset($_GET['score'])?$_GET['score']:"";
 $level=isset($_GET['level'])?$_GET['level']:"";
  
 echo  "Username of user is: ".$username."\n";
-echo  "Score is: ".$score;
-echo  "Level is:".$level;
+echo  "Score is: ".$score."\n";
+echo  "Level is:".$level."\n";
 
-
-echo "\n";
 
 // Connect to database
 $connection = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);

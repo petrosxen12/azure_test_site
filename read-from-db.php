@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<p> <strong>Username:</strong> " . $row["username"]. " <strong>Score:</strong>" . $row["score"]. "<strong>Level:</strong>" . $row["level"]. "</p>";
+        echo "<p> <strong>Username:</strong> " . $row["username"]. " <strong>Score:</strong>" . $row["score"]. " <strong>Level:</strong>" . $row["level"]. "</p>";
     }
 } else {
     echo "0 results";
