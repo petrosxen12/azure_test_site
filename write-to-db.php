@@ -6,9 +6,11 @@ $dbname = "scores";
 
 //$username = $_POST["username"];
 //$score = $_POST["score"];
-
-$username = 'Giannis';
-$score = 0;
+$screenname=isset($_GET['username'])?$_GET['username']:"";
+$scoreOfUser=isset($_GET['score'])?$_GET['score']:"";
+ 
+echo  "Username of user is: ".$screenname."\n";
+echo  "Score is: ".$scoreOfUser;
 
 // Connect to database
 $connection = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
@@ -18,7 +20,7 @@ if ($connection->connect_error) {
 } 
 
 $query = "INSERT INTO scores (username, score)
-VALUES ('". $username ."', ". $score .")";
+VALUES ('". $screenname ."', ". $scoreOfUser .")";
 
 if ($connection->query($query) === TRUE) {
     echo "New record created successfullyy";
