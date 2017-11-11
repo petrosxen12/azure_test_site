@@ -9,15 +9,13 @@ $dbname = "scores";
 
 $username=isset($_GET['username'])?$_GET['username']:"";
 $score=isset($_GET['score'])?$_GET['score']:"";
+$level=isset($_GET['level'])?$_GET['level']:"";
  
 echo  "Username of user is: ".$username."\n";
 echo  "Score is: ".$score;
+echo  "Level is:".$level;
 
 
-/*
-$username = 'Giannis';
-$score = 0;
-*/
 echo "\n";
 
 // Connect to database
@@ -27,8 +25,8 @@ if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 } 
 
-$query = "INSERT INTO scores (username, score)
-VALUES ('". $username ."', ". $score .")";
+$query = "INSERT INTO scores (username, score,level)
+VALUES ('". $username ."', ". $score .",". $level.")";
 
 if ($connection->query($query) === TRUE) {
     echo "New record created successfully.";
