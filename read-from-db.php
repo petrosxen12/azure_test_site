@@ -10,14 +10,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-
+$i = 1;
 $sql = "SELECT * FROM scores ORDER BY score desc";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<p> <strong>Username:</strong> " . $row["username"]. " <strong>Score:</strong>" . $row["score"]. " <strong>Level:</strong>" . $row["level"]. "</p>";
+        echo "<tr> <th scope="row">".$i."</th>"."<td>".$row["username"]."</td>"."<td>".$row["score"]. "</td>"."<td>".$row["level"]. "</td></tr>";
     }
 } else {
     echo "0 results";
