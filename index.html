@@ -47,9 +47,20 @@
 										<div style="text-align: center; padding-left: 20%;">
                                         <h2>Live Leaderboard: </h2>
                                         <br/>
-                                
-                                            <?php  include 'read-from-db.php' ?>
-                            
+											<table class="table table-inverse">
+											  <thead>
+											    <tr>
+											      <th>#</th>
+											      <th>Screen Name</th>
+											      <th>Score</th>
+											      <th>Level</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											  	<?php  include 'read-from-db.php' ?>                       
+											  </tbody>
+											</table>                                			
+
                                         </div>
 									 </header> 
 								
